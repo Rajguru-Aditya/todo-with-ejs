@@ -2,6 +2,6 @@
 
 A to-do list app using Node.js, expressJS, and ejs.
 
-/Live Link: https://todo-with-ejs.herokuapp.com/
+Live Link: https://todo-with-ejs.herokuapp.com/
 
 Right now the there is no option for deleting an item you added, but I'll soo be adding it.
