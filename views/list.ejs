@@ -8,21 +8,21 @@
 
     <div class="box">
 
-        <% for(let i=0; i < newListItems.length; i++){ %>
-            <div class="item">
-                <input type="checkbox">
+    <% newListItems.forEach(function(item){ %>
+        <form action="/delete" method="post">
+            <div id="item">
+                <input name="checkbox" value="<%= item._id %>" type="checkbox" onChange="this.form.submit()">
                 <p>
-                    <%= newListItems[i].name %>
+                    <%= item.name %>
                 </p>
-            </div>
-            <% } %>
+            </div> 
+        </form>
+    <% }) %>
 
-
-
-                <form class="item" action="/" method="post">
-                    <input placeholder="New Item" name="newItem" type="text" autocomplete="off">
-                    <button type="submit" name="list" value=<%=listTitle%> >+</button>
-                </form>
+    <form class="item" action="/" method="post">
+        <input placeholder="New Item" name="newItem" type="text" autocomplete="off">
+        <button type="submit" name="list" value=<%=listTitle%> >+</button>
+    </form>
     </div>
 
     <%- include("footer") -%>
